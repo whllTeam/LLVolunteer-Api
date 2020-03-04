@@ -1,0 +1,410 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Volunteer.WebApi</name>
+    </assembly>
+    <members>
+        <member name="T:Volunteer.WebApi.Controllers.ActivityForOrgController">
+            <summary>
+            志愿组织下志愿活动Api
+            </summary>
+        </member>
+        <member name="M:Volunteer.WebApi.Controllers.ActivityForOrgController.GetActivities(Volunteer.Core.Entities.QueryParameters)">
+            <summary>
+            获取 志愿活动
+            </summary>
+            <param name="parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Volunteer.WebApi.Controllers.ActivityForOrgController.AddActivity(Volunteer.Core.Entities.QueryModel.ActivityRequest)">
+            <summary>
+            添加志愿活动
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Volunteer.WebApi.Controllers.ActivityForOrgController.ModifyActivity(System.Int32,Volunteer.Core.Entities.QueryModel.ActivityRequest)">
+            <summary>
+            修改志愿活动
+            </summary>
+            <param name="id"></param>
+            <param name="vo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Volunteer.WebApi.Controllers.ActivityForOrgController.DelActivity(System.Int32,Volunteer.Core.Entities.Activities.Enum.ShowType)">
+            <summary>
+            修改 当前活动是否开启
+            </summary>
+            <param name="id"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Volunteer.WebApi.Controllers.ActivityForOrgController.ActivitySign(Volunteer.Core.Entities.QueryModel.SignQuery)">
+            <summary>
+            报名、取消报名
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Volunteer.WebApi.Controllers.ActivityForOrgController.GetSignInfo(Volunteer.Core.Entities.QueryModel.SignQuery)">
+            <summary>
+            得到当前活动报名信息
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Volunteer.WebApi.Controllers.ActivityForOrgController.GetSignInfoSelf(Volunteer.Core.Entities.QueryModel.SignQuery)">
+            <summary>
+            得到当前用户报名信息
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Volunteer.WebApi.Controllers.ActivityForOrgController.GetActivitySignInfoQuery(Volunteer.Core.Entities.QueryParameters)">
+            <summary>
+            得到活动报名记录信息
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Volunteer.WebApi.Controllers.ActivityForOrgController.GetActivitySignInfoTable(Volunteer.Core.Entities.QueryParameters)">
+            <summary>
+            admin 端： 获取志愿组织下  志愿活动 报名信息
+            </summary>
+            
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Volunteer.WebApi.Controllers.ActivityForOrgController.GetFileList(System.Int32)">
+            <summary>
+            获取志愿组织下志愿活动 文件信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Volunteer.WebApi.Controllers.DormitoryController">
+            <summary>
+            寝室楼Api
+            </summary>
+        </member>
+        <member name="M:Volunteer.WebApi.Controllers.DormitoryController.GetDormitoryTable(Volunteer.Core.Entities.QueryParameters)">
+            <summary>
+            获取寝室楼值班表
+            </summary>
+            <param name="parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Volunteer.WebApi.Controllers.DormitoryController.GetDormitoryType">
+            <summary>
+            获取寝室楼类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Volunteer.WebApi.Controllers.DormitoryController.GetTimeDay">
+            <summary>
+            获取寝室楼时间段信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Volunteer.WebApi.Controllers.DormitoryController.GetWeeks">
+            <summary>
+            获取寝室楼周信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Volunteer.WebApi.Controllers.DormitoryController.GetSignInfo(Volunteer.Core.Entities.QueryModel.SignQuery)">
+            <summary>
+            当前寝室楼报名信息
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Volunteer.WebApi.Controllers.DormitoryController.GetSignInfoSelf(Volunteer.Core.Entities.QueryModel.SignQuery)">
+            <summary>
+            获取当前用户的寝室楼值班信息
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Volunteer.WebApi.Controllers.DormitoryController.DormitorySign(Volunteer.Core.Entities.QueryModel.SignQuery)">
+            <summary>
+            报名/取消报名 寝室楼值班
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Volunteer.WebApi.Controllers.DormitoryController.GetDormitorySignCount(Volunteer.Core.Entities.QueryModel.SignQuery)">
+            <summary>
+            获取当前用户 寝室楼值班次数信息
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Volunteer.WebApi.Controllers.DormitoryController.GetDormitorySignDetailInfo(Volunteer.Core.Entities.QueryModel.SignQuery)">
+            <summary>
+            当前用户 寝室楼报名记录
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Volunteer.WebApi.Controllers.DormitoryController.GetDormitorySignInfoQuery(Volunteer.Core.Entities.QueryModel.SignQuery)">
+            <summary>
+            admin 端 寝室楼报名信息
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Volunteer.WebApi.Controllers.DormitoryController.CheckStateForDormitory(Volunteer.Core.Entities.QueryModel.CheckStateRequest)">
+            <summary>
+            寝室楼值班  审核
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Volunteer.WebApi.Controllers.DormitoryController.GetCheckTableInfo(Volunteer.Core.Entities.QueryModel.CheckStateInfoRequest)">
+            <summary>
+            获取 寝室楼审核 值班信息
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Volunteer.WebApi.Controllers.FileManagerController.UploadFile">
+            <summary>
+            文件上传
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Volunteer.WebApi.Controllers.OfficesController">
+            <summary>
+            办公室 API
+            </summary>
+        </member>
+        <member name="M:Volunteer.WebApi.Controllers.OfficesController.GetOfficeTable(Volunteer.Core.Entities.QueryParameters)">
+            <summary>
+            办公室值班表信息
+            </summary>
+            <param name="parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Volunteer.WebApi.Controllers.OfficesController.GetOfficeType">
+            <summary>
+            办公室 类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Volunteer.WebApi.Controllers.OfficesController.GetTime">
+            <summary>
+            办公室时间段信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Volunteer.WebApi.Controllers.OfficesController.GetWeek">
+            <summary>
+            周信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Volunteer.WebApi.Controllers.OfficesController.GetSignInfo(Volunteer.Core.Entities.QueryModel.SignQuery)">
+            <summary>
+            当前时间段  办公室报名信息
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Volunteer.WebApi.Controllers.OfficesController.GetSignInfoSelf(Volunteer.Core.Entities.QueryModel.SignQuery)">
+            <summary>
+            当前用户报名信息
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Volunteer.WebApi.Controllers.OfficesController.DormitorySign(Volunteer.Core.Entities.QueryModel.SignQuery)">
+            <summary>
+            报名/取消报名 寝室楼值班
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Volunteer.WebApi.Controllers.OfficesController.GetOfficeSignCount(Volunteer.Core.Entities.QueryModel.SignQuery)">
+            <summary>
+            当前用户  寝室楼值班报名次数
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Volunteer.WebApi.Controllers.OfficesController.GetOfficeSignDetailInfo(Volunteer.Core.Entities.QueryModel.SignQuery)">
+            <summary>
+            当前用户  办公室报名记录
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Volunteer.WebApi.Controllers.OfficesController.GetDormitorySignInfoQuery(Volunteer.Core.Entities.QueryModel.SignQuery)">
+            <summary>
+            admin端  办公室报名信息
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Volunteer.WebApi.Controllers.OfficesController.CheckStateForOffice(Volunteer.Core.Entities.QueryModel.CheckStateRequest)">
+            <summary>
+            办公室报名 审核
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Volunteer.WebApi.Controllers.OfficesController.GetCheckTableInfo(Volunteer.Core.Entities.QueryModel.CheckStateInfoRequest)">
+            <summary>
+            获取 办公室审核 值班信息
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Volunteer.WebApi.Controllers.OrganizationController">
+            <summary>
+            志愿组织 API
+            </summary>
+        </member>
+        <member name="M:Volunteer.WebApi.Controllers.OrganizationController.GetOrganization">
+            <summary>
+            获取  志愿组织信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Volunteer.WebApi.Controllers.OrganizationController.AddOrganization(Volunteer.Core.Entities.QueryModel.OrganizationRequest)">
+            <summary>
+            添加志愿组织信息
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Volunteer.WebApi.Controllers.OrganizationController.DelOrganization(System.Int32,Volunteer.Core.Entities.Activities.Enum.ShowType)">
+            <summary>
+            启用/关闭 志愿组织
+            </summary>
+            <param name="orgId"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Volunteer.WebApi.Controllers.OrganizationController.ModifyOrganization(System.Int32,Volunteer.Core.Entities.QueryModel.OrganizationRequest)">
+            <summary>
+            更新志愿组织信息
+            </summary>
+            <param name="id"></param>
+            <param name="vo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Volunteer.WebApi.Controllers.OrganizationController.GetOrganizationForAdmin(Volunteer.Core.Entities.QueryParameters)">
+            <summary>
+            admin 端  查询  志愿组织信息
+            </summary>
+            <param name="parms"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Volunteer.WebApi.Controllers.PageInfoController">
+            <summary>
+            志愿动态API
+            </summary>
+        </member>
+        <member name="M:Volunteer.WebApi.Controllers.PageInfoController.GetPaperInfo(Volunteer.Core.Entities.QueryParameters)">
+            <summary>
+            获取志愿动态信息
+            </summary>
+            <param name="parms"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Volunteer.WebApi.Controllers.PageInfoController.AddPageInfo(Volunteer.Core.Entities.QueryModel.PageInfoRequest)">
+            <summary>
+            添加志愿动态信息
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Volunteer.WebApi.Controllers.PageInfoController.DelPageInfo(System.Int32,Volunteer.Core.Entities.Activities.Enum.ShowType)">
+            <summary>
+            删除志愿动态
+            </summary>
+            <param name="pageId"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Volunteer.WebApi.Controllers.PageInfoController.ModifyPageInfo(System.Int32,Volunteer.Core.Entities.QueryModel.PageInfoRequest)">
+            <summary>
+            更新志愿动态
+            </summary>
+            <param name="pageId"></param>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Volunteer.WebApi.Controllers.PageInfoController.GetFileList(System.Int32)">
+            <summary>
+            文章 文件信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Volunteer.WebApi.Controllers.SchoolUserManagerController">
+            <summary>
+            学生认证 API
+            </summary>
+        </member>
+        <member name="M:Volunteer.WebApi.Controllers.SchoolUserManagerController.AddSchoolUserInfo(Volunteer.Core.Entities.QueryModel.SchoolUserInfoRequest)">
+            <summary>
+            添加  学生认证信息
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Volunteer.WebApi.Controllers.SchoolUserManagerController.GetUserInfoByName(System.String)">
+            <summary>
+            通过登录名获取用户信息
+            </summary>
+            <param name="userName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Volunteer.WebApi.Controllers.SchoolUserManagerController.GetUserInfoById(System.String)">
+            <summary>
+            通过学号查询  
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Volunteer.WebApi.Controllers.SchoolUserManagerController.UserHasAuthorized(System.String)">
+            <summary>
+            确认当前用户是否已认证
+            </summary>
+            <param name="userName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Volunteer.WebApi.Controllers.SignActivityNotesController">
+            <summary>
+            志愿活动报名动态API
+            </summary>
+        </member>
+        <member name="M:Volunteer.WebApi.Controllers.SignActivityNotesController.GetSignActivityNotes(System.String)">
+            <summary>
+            获取当前用户的报名记录
+            </summary>
+            <param name="userName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Volunteer.WebApi.Controllers.SignActivityNotesController.GetSignActivityNotesAll">
+            <summary>
+            获取所有用户的报名动态
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Volunteer.WebApi.Controllers.UserVolunteerController">
+            <summary>
+            用户志愿管理API
+            </summary>
+        </member>
+        <member name="M:Volunteer.WebApi.Controllers.UserVolunteerController.GetTodoInfo(Volunteer.Core.Entities.QueryModel.TodoInfoRequest)">
+            <summary>
+            获取当前用户的待办信息
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

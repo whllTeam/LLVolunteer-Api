@@ -1,5 +1,17 @@
 ﻿################################################################################
 # 此 .gitignore 文件已由 Microsoft(R) Visual Studio 自动创建。
 ################################################################################
-
-/LLVolunteerApi/.vs/LLVolunteerApi/v16
+/.vs
+/LLVolunteerApi/.vs/EsbPsychology/v16
+/LLVolunteerApi/*/bin
+/LLVolunteerApi/*/obj
+/LLVolunteerApi/.vs
+/LLVolunteerApi/*/*/obj
+/LLVolunteerApi/*/*/bin
+/LLVolunteerApi/*/*/*/obj
+/LLVolunteerApi/*/*/*/bin
+api-release/
+/LLVolunteerApi/*/Properties/PublishProfiles
+/LLVolunteerApi/Volunteer.WebApi/log
+/LLVolunteerApi/Volunteer.WebApi/data
+/LLVolunteerApi/Volunteer.WebApi/Upload

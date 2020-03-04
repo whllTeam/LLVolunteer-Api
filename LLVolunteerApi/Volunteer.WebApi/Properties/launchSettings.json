@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Volunteer.WebApi": {
+      "commandName": "Project",
+      "commandLineArgs": " ",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "http://localhost:4000"
+    }
+  }
+}
